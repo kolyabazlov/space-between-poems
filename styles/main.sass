@@ -1,0 +1,156 @@
+$color-main: #DDB97D
+$color-active: #BF9F68
+$color-white: #ffffff
+
+@keyframes trim
+  from
+    stroke-dashoffset: 3000
+  to
+    stroke-dashoffset: 0
+@keyframes hero-trim
+  from
+    stroke-dashoffset: 2974
+  to
+    stroke-dashoffset: 0
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'Lora', serif
+  line-height: 26px
+body
+  overflow: hidden
+.hero
+  position: absolute
+  z-index: -10
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #000
+  display: flex
+  align-content: center
+  .hero-video
+    width: 100%
+    object-fit: contain
+main
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 0
+  background-color: #fff
+  transform: translateY(100vh)
+  transition: .5s
+  //.header-overlay
+  //  position: absolute
+  //  width: 100%
+  //  height: 88px
+  //  top: 0
+  //  left: 0
+  //  z-index: 5
+  //  background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+  .container
+    position: relative
+    margin: auto
+    max-width: 1440px
+    height: 100%
+    background-color: #fff
+    #button-next
+      z-index: 10
+      position: absolute
+      bottom: 40px
+      right: calc(50% - 52px)
+      width: 104px
+      height: 104px
+      border-radius: 50%
+      border: 1px solid $color-main
+      cursor: pointer
+      color: #000
+      font-weight: 400
+      font-size: 16px
+      text-transform: uppercase
+      background-color: #ffffff
+      outline: none
+      transition: .5s
+      &:hover
+        color: #fff
+        background-color: $color-main
+        border: 1px solid $color-main
+      &:active
+        color: #fff
+        background-color: $color-active
+        border: 1px solid $color-active
+      @media screen and (max-width: 768px)
+        right: 16px
+        bottom: 32px
+    .poem-wrapper
+      &::-webkit-scrollbar
+        display: none
+      position: relative
+      z-index: 3
+      margin: 0 128px
+      overflow-y: scroll
+      scrollbar-width: none
+      padding-top: 88px
+      height: 100%
+      @media screen and (max-width: 768px)
+        margin: 0 24px
+        display: flex
+        flex-direction: column
+      .poem-title
+        transition: .5s
+        font-size: 24px
+        font-weight: 400
+        line-height: 26px
+        color: $color-main
+      .poem-text
+        margin-top: 10px
+        max-width: 450px
+        padding-bottom: 88px
+        font-size: 16px
+        transition: .5s
+    .poem-svg-wrapper
+      position: absolute
+      z-index: 1
+      right: 32px
+      bottom: 0
+      transition: .5s
+      @media screen and (max-width: 768px)
+        right: 0
+      @media screen and (max-width: 588px)
+        right: 0
+        svg
+          width: 100%
+          path
+            transform: translateY(20%)
+    .email-icon
+      z-index: 10
+      position: fixed
+      top: 88px
+      right: 128px
+      cursor: pointer
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background-color: transparent
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: .5s
+      .email-icon-svg path
+        fill: $color-main
+        transition: .5s
+      &:hover
+        background-color: $color-main
+        .email-icon-svg path
+          fill: #fff
+      &:active
+        background-color: $color-active
+        .email-icon-svg path
+          fill: #fff
+      @media screen and (max-width: 768px)
+        position: static
+        margin: auto auto 0 auto
+        padding-bottom: 36px
