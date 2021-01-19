@@ -108,7 +108,8 @@ main .container .poem-wrapper::-webkit-scrollbar {
 }
 @media screen and (max-width: 768px) {
   main .container .poem-wrapper {
-    margin: 0 24px;
+    margin: 0;
+    padding: 88px 24px;
     display: flex;
     flex-direction: column;
   }
@@ -123,7 +124,6 @@ main .container .poem-wrapper .poem-title {
 main .container .poem-wrapper .poem-text {
   margin-top: 10px;
   max-width: 450px;
-  padding-bottom: 88px;
   font-size: 16px;
   transition: 0.5s;
 }
@@ -159,7 +159,8 @@ main .container .email-wrapper {
 @media screen and (max-width: 768px) {
   main .container .email-wrapper {
     position: static;
-    margin: auto auto 36px auto;
+    margin: auto auto 36px 0;
+    transform: translateX(-8px) translateY(80px);
   }
 }
 main .container .email-wrapper #email-icon {
@@ -169,11 +170,11 @@ main .container .email-wrapper #email-icon {
   max-width: 40px;
   max-height: 40px;
   border-radius: 50%;
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.5s;
+  background-color: #ffffff;
 }
 main .container .email-wrapper #email-icon .email-icon-svg path {
   fill: #DDB97D;
@@ -211,13 +212,16 @@ main .container .email-wrapper #email-copied-layout .email-copied-svg {
   position: absolute;
   top: 0;
   right: -35px;
-  min-width: 110px;
-  min-height: 48px;
+  min-width: 111px;
+  max-width: 111px;
+  min-height: 47px;
+  max-height: 47px;
   background-color: #ffffff;
 }
 @media screen and (max-width: 768px) {
   main .container .email-wrapper #email-copied-layout .email-copied-svg {
-    transform: rotate(180deg);
+    right: unset;
+    left: 0px;
   }
 }
 main .container .email-wrapper #email-copied-layout .email-copied-text {
@@ -228,7 +232,9 @@ main .container .email-wrapper #email-copied-layout .email-copied-text {
 }
 @media screen and (max-width: 768px) {
   main .container .email-wrapper #email-copied-layout .email-copied-text {
-    top: 8px;
+    right: unset;
+    top: 6px;
+    left: 4px;
   }
 }
 

@@ -148,3 +148,10 @@ $("#email-icon").on("click", function () {
        $("#email-copied-layout").css("opacity", "0");
    })
 });
+
+// Copied message path paste
+if ($(window).width() > 768) {
+    $(".email-copied-svg").html("<path d=\"M1 17.5V40C1 44.4183 4.58172 48 9 48H104C108.418 48 112 44.4183 112 40V17.5C112 13.0817 108.418 9.5 104 9.5H65.2877L57.2511 1L48.21 9.5H9C4.58172 9.5 1 13.0817 1 17.5Z\" fill=\"white\" stroke=\"#DDB97D\"/>");
+} else {
+    $(".email-copied-svg").html("<path d=\"M1 31.5V9C1 4.58172 4.58172 1 9 1H104C108.418 1 112 4.58172 112 9V31.5C112 35.9183 108.418 39.5 104 39.5H27.2877L19.2511 48L10.21 39.5H9C4.58172 39.5 1 35.9183 1 31.5Z\" fill=\"white\" stroke=\"#DDB97D\"/>");
+}

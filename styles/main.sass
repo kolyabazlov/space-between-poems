@@ -96,7 +96,8 @@ main
       padding-top: 88px
       height: 100%
       @media screen and (max-width: 768px)
-        margin: 0 24px
+        margin: 0
+        padding: 88px 24px
         display: flex
         flex-direction: column
       .poem-title
@@ -108,7 +109,6 @@ main
       .poem-text
         margin-top: 10px
         max-width: 450px
-        padding-bottom: 88px
         font-size: 16px
         transition: .5s
     .poem-svg-wrapper
@@ -132,7 +132,8 @@ main
       right: 128px
       @media screen and (max-width: 768px)
         position: static
-        margin: auto auto 36px auto
+        margin: auto auto 36px 0
+        transform: translateX(-8px) translateY(80px)
       #email-icon
         cursor: pointer
         min-width: 40px
@@ -140,11 +141,11 @@ main
         max-width: 40px
         max-height: 40px
         border-radius: 50%
-        background-color: transparent
         display: flex
         justify-content: center
         align-items: center
         transition: .5s
+        background-color: #ffffff
         .email-icon-svg path
           fill: $color-main
           transition: .5s
@@ -172,16 +173,23 @@ main
           position: absolute
           top: 0
           right: -35px
-          min-width: 110px
-          min-height: 48px
+          min-width: 111px
+          max-width: 111px
+          min-height: 47px
+          max-height: 47px
           background-color: #ffffff
           @media screen and (max-width: 768px)
-            transform: rotate(180deg)
+            right: unset
+            left: 0px
         .email-copied-text
           position: absolute
           top: 14px
           right: -31px
           white-space: nowrap
           @media screen and (max-width: 768px)
-            top: 8px
+            right: unset
+            top: 6px
+            left: 4px
+
+
 
