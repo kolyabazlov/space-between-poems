@@ -201,7 +201,7 @@ main .container .email-wrapper #email-copied-layout {
 @media screen and (max-width: 768px) {
   main .container .email-wrapper #email-copied-layout {
     left: calc(50% + 20px);
-    top: calc(100% - 124px);
+    top: calc(100vh - 124px);
   }
 }
 main .container .email-wrapper #email-copied-layout .email-copied-svg {
