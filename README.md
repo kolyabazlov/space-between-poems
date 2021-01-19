@@ -1,5 +1,3 @@
-# Сайт с авторской поэзией.
-
-html \ sass \ javascipt
+### Сайт с авторской поэзией.
 
 Глянуть можно здесь http://spacebetweenpoems.com
