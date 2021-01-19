@@ -53,7 +53,7 @@ $.getJSON("json/lyrics.json", function (data) {
     .then(r => {
     console.log("success get json");
 
-    delay(3500).then(() => {
+    delay(4200).then(() => {
         $("#main").css("transform", "translateY(0)")
     }).then(() => {
         fadeOut("#poem-title");

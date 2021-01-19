@@ -210,8 +210,8 @@ main .container .email-wrapper #email-copied-layout {
 main .container .email-wrapper #email-copied-layout .email-copied-svg {
   position: absolute;
   top: 0;
-  right: -27px;
-  min-width: 94px;
+  right: -35px;
+  min-width: 110px;
   min-height: 48px;
   background-color: #ffffff;
 }
@@ -223,7 +223,8 @@ main .container .email-wrapper #email-copied-layout .email-copied-svg {
 main .container .email-wrapper #email-copied-layout .email-copied-text {
   position: absolute;
   top: 14px;
-  right: -8px;
+  right: -31px;
+  white-space: nowrap;
 }
 @media screen and (max-width: 768px) {
   main .container .email-wrapper #email-copied-layout .email-copied-text {
