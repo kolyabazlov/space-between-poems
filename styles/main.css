@@ -150,14 +150,24 @@ main .container .poem-svg-wrapper {
     transform: translateY(20%);
   }
 }
-main .container .email-icon {
+main .container .email-wrapper {
   z-index: 10;
   position: fixed;
   top: 88px;
   right: 128px;
+}
+@media screen and (max-width: 768px) {
+  main .container .email-wrapper {
+    position: static;
+    margin: auto auto 36px auto;
+  }
+}
+main .container .email-wrapper #email-icon {
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
   border-radius: 50%;
   background-color: transparent;
   display: flex;
@@ -165,27 +175,56 @@ main .container .email-icon {
   align-items: center;
   transition: 0.5s;
 }
-main .container .email-icon .email-icon-svg path {
+main .container .email-wrapper #email-icon .email-icon-svg path {
   fill: #DDB97D;
   transition: 0.5s;
 }
-main .container .email-icon:hover {
+main .container .email-wrapper #email-icon:hover {
   background-color: #DDB97D;
 }
-main .container .email-icon:hover .email-icon-svg path {
+main .container .email-wrapper #email-icon:hover .email-icon-svg path {
   fill: #fff;
 }
-main .container .email-icon:active {
+main .container .email-wrapper #email-icon:active {
   background-color: #BF9F68;
 }
-main .container .email-icon:active .email-icon-svg path {
+main .container .email-wrapper #email-icon:active .email-icon-svg path {
   fill: #fff;
 }
+main .container .email-wrapper #email-copied-layout {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  opacity: 0;
+  transition: 0.5s;
+}
 @media screen and (max-width: 768px) {
-  main .container .email-icon {
-    position: static;
-    margin: auto auto 0 auto;
-    padding-bottom: 36px;
+  main .container .email-wrapper #email-copied-layout {
+    left: calc(50% + 20px);
+    top: calc(100% - 124px);
+  }
+}
+main .container .email-wrapper #email-copied-layout .email-copied-svg {
+  position: absolute;
+  top: 0;
+  right: -27px;
+  min-width: 94px;
+  min-height: 48px;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  main .container .email-wrapper #email-copied-layout .email-copied-svg {
+    transform: rotate(180deg);
+  }
+}
+main .container .email-wrapper #email-copied-layout .email-copied-text {
+  position: absolute;
+  top: 14px;
+  right: -8px;
+}
+@media screen and (max-width: 768px) {
+  main .container .email-wrapper #email-copied-layout .email-copied-text {
+    top: 8px;
   }
 }
 

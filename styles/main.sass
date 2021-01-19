@@ -125,32 +125,59 @@ main
           width: 100%
           path
             transform: translateY(20%)
-    .email-icon
+    .email-wrapper
       z-index: 10
       position: fixed
       top: 88px
       right: 128px
-      cursor: pointer
-      width: 40px
-      height: 40px
-      border-radius: 50%
-      background-color: transparent
-      display: flex
-      justify-content: center
-      align-items: center
-      transition: .5s
-      .email-icon-svg path
-        fill: $color-main
-        transition: .5s
-      &:hover
-        background-color: $color-main
-        .email-icon-svg path
-          fill: #fff
-      &:active
-        background-color: $color-active
-        .email-icon-svg path
-          fill: #fff
       @media screen and (max-width: 768px)
         position: static
-        margin: auto auto 0 auto
-        padding-bottom: 36px
+        margin: auto auto 36px auto
+      #email-icon
+        cursor: pointer
+        min-width: 40px
+        min-height: 40px
+        max-width: 40px
+        max-height: 40px
+        border-radius: 50%
+        background-color: transparent
+        display: flex
+        justify-content: center
+        align-items: center
+        transition: .5s
+        .email-icon-svg path
+          fill: $color-main
+          transition: .5s
+        &:hover
+          background-color: $color-main
+          .email-icon-svg path
+            fill: #fff
+        &:active
+          background-color: $color-active
+          .email-icon-svg path
+            fill: #fff
+      #email-copied-layout
+        position: absolute
+        top: 40px
+        left: 40px
+        opacity: 0
+        transition: .5s
+        @media screen and (max-width: 768px)
+          left: calc(50% + 20px)
+          top: calc(100% - 124px)
+        .email-copied-svg
+          position: absolute
+          top: 0
+          right: -27px
+          min-width: 94px
+          min-height: 48px
+          background-color: #ffffff
+          @media screen and (max-width: 768px)
+            transform: rotate(180deg)
+        .email-copied-text
+          position: absolute
+          top: 14px
+          right: -8px
+          @media screen and (max-width: 768px)
+            top: 8px
+

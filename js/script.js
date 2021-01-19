@@ -53,7 +53,7 @@ $.getJSON("json/lyrics.json", function (data) {
     .then(r => {
     console.log("success get json");
 
-    delay(4000).then(() => {
+    delay(100).then(() => {
         $("#main").css("transform", "translateY(0)")
     }).then(() => {
         fadeOut("#poem-title");
@@ -115,4 +115,36 @@ $("#button-next").on("click", function () {
         fadeIn("#poem-title");
         fadeIn("#poem-text");
     });
+});
+
+$("#email-icon").on("click", function () {
+    // Вся эта дичь чтобы скопировать текст в общем. Добавляю textarea \ оттуда беру нужный текст \ удаляю.
+    let email = "scott.wohlberg09@gmail.com";
+    let textArea = document.createElement("textarea");
+    textArea.style.position = 'fixed';
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    textArea.style.padding = "0";
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    textArea.style.background = 'transparent';
+    textArea.value = email;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    try {
+        let successful = document.execCommand('copy');
+        let msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to copy');
+    }
+    document.body.removeChild(textArea);
+   $("#email-copied-layout").css("opacity", "1");
+   delay(2000).then(() => {
+       $("#email-copied-layout").css("opacity", "0");
+   })
 });
