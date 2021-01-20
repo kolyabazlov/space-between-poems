@@ -155,3 +155,9 @@ if ($(window).width() > 768) {
 } else {
     $(".email-copied-svg").html("<path d=\"M1 31.5V9C1 4.58172 4.58172 1 9 1H104C108.418 1 112 4.58172 112 9V31.5C112 35.9183 108.418 39.5 104 39.5H27.2877L19.2511 48L10.21 39.5H9C4.58172 39.5 1 35.9183 1 31.5Z\" fill=\"white\" stroke=\"#DDB97D\"/>");
 }
+
+// Fix hover effect for touch devices
+document.addEventListener('touchstart', function addTouchClass(e) {
+    document.documentElement.classList.add('can-touch');
+    document.removeEventListener('touchstart', addTouchClass, false)
+}, false);

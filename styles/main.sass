@@ -163,6 +163,7 @@ main
         left: 40px
         opacity: 0
         transition: .5s
+        font-size: 14px
         @media screen and (max-width: 768px)
           position: relative
           left: unset
@@ -180,16 +181,35 @@ main
           background-color: #ffffff
           @media screen and (max-width: 768px)
             right: unset
-            left: 0px
+            left: 0
         .email-copied-text
           position: absolute
           top: 14px
-          right: -31px
+          right: -25px
           white-space: nowrap
           @media screen and (max-width: 768px)
             right: unset
             top: 6px
-            left: 4px
-
+            left: 10px
+.can-touch
+  #button-next
+    &:hover
+      color: #000!important
+      background-color: #ffffff!important
+      border: 1px solid $color-main!important
+    &:active
+      color: #fff!important
+      background-color: $color-active!important
+      border: 1px solid $color-active!important
+.can-touch
+  #email-icon
+    &:hover
+      background-color: #ffffff!important
+      .email-icon-svg path
+        fill: $color-main!important
+    &:active
+      background-color: $color-active!important
+      .email-icon-svg path
+        fill: #fff!important
 
 

@@ -198,6 +198,7 @@ main .container .email-wrapper #email-copied-layout {
   left: 40px;
   opacity: 0;
   transition: 0.5s;
+  font-size: 14px;
 }
 @media screen and (max-width: 768px) {
   main .container .email-wrapper #email-copied-layout {
@@ -221,21 +222,45 @@ main .container .email-wrapper #email-copied-layout .email-copied-svg {
 @media screen and (max-width: 768px) {
   main .container .email-wrapper #email-copied-layout .email-copied-svg {
     right: unset;
-    left: 0px;
+    left: 0;
   }
 }
 main .container .email-wrapper #email-copied-layout .email-copied-text {
   position: absolute;
   top: 14px;
-  right: -31px;
+  right: -25px;
   white-space: nowrap;
 }
 @media screen and (max-width: 768px) {
   main .container .email-wrapper #email-copied-layout .email-copied-text {
     right: unset;
     top: 6px;
-    left: 4px;
+    left: 10px;
   }
+}
+
+.can-touch #button-next:hover {
+  color: #000 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #DDB97D !important;
+}
+.can-touch #button-next:active {
+  color: #fff !important;
+  background-color: #BF9F68 !important;
+  border: 1px solid #BF9F68 !important;
+}
+
+.can-touch #email-icon:hover {
+  background-color: #ffffff !important;
+}
+.can-touch #email-icon:hover .email-icon-svg path {
+  fill: #DDB97D !important;
+}
+.can-touch #email-icon:active {
+  background-color: #BF9F68 !important;
+}
+.can-touch #email-icon:active .email-icon-svg path {
+  fill: #fff !important;
 }
 
 /*# sourceMappingURL=main.css.map */
