@@ -52,18 +52,19 @@ $.getJSON("json/lyrics.json", function (data) {
 })
     .then(r => {
     console.log("success get json");
-
-    delay(4200).then(() => {
-        $("#main").css("transform", "translateY(0)")
-    }).then(() => {
-        fadeOut("#poem-title");
-        fadeOut("#poem-text");
-        delay(500).then(() => {
-            updateHtml();
-            fadeIn("#poem-title");
-            fadeIn("#poem-text");
+    $(".hero-video").on("loadeddata", function () {
+        delay(4500).then(() => {
+            $("#main").css("transform", "translateY(0)")
+        }).then(() => {
+            fadeOut("#poem-title");
+            fadeOut("#poem-text");
+            delay(500).then(() => {
+                updateHtml();
+                fadeIn("#poem-title");
+                fadeIn("#poem-text");
+            })
         })
-    })
+    });
 });
 
 function changeIndex() {
